@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pure-raytracer"
+version = "0.1.0"
+description = "纯 Python 光线追踪渲染器：零依赖、手写 PNG 编码、支持反射折射与景深"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "eastyou" }]
+keywords = ["raytracing", "graphics", "renderer", "png", "python", "zero-dependency"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Graphics :: 3D Rendering",
+  "Typing :: Typed",
+]
+
+[project.scripts]
+raytrace = "raytracer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/eastyou/pure-raytracer"
+Source = "https://github.com/eastyou/pure-raytracer"
+
+[tool.setuptools]
+packages = ["raytracer"]
